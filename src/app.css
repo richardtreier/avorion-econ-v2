@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table.table-small {
+  @apply w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden;
+}
+
+table.table-small thead {
+  @apply bg-gray-50;
+}
+
+table.table-small thead tr {
+  @apply text-gray-600 text-left;
+}
+
+table.table-small thead tr th {
+  @apply font-semibold text-sm uppercase;
+}
+
+table.table-small tbody {
+  @apply divide-y divide-gray-200;
+}
+
+table.table-small thead tr th,
+table.table-small tbody tr td {
+  @apply px-3 py-2;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+.btn-indigo {
+  @apply bg-indigo-500 text-white;
+}
+.btn-indigo:hover {
+  @apply bg-indigo-700;
+}
