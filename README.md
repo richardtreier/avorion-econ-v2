@@ -2,33 +2,42 @@
   <p align="center">
     Avorion Factory Bill of Material tool.
     <br />
+    <a href="https://richardtreier.github.io/avorion-econ-v2">View Live Version</a> | 
     <a href="https://github.com/richardtreier/avorion-econ-v2/issues">Report Bug</a>
   </p>
 </div>
 
-## About
+## What is this?
 
-Plan your Avorion factory supply chains and look up information otherwise only available in the avorion game files, such as optimal production capabilities of a given factory.
+Avorion is a Sandbox game with a simulated economy, space stations with supply chains.
 
-This is based on [Omnicrola/avorion-econ](https://github.com/Omnicrola/avorion-econ)([Live Version](https://omnicrola.github.io/avorion-econ/)). This version is a rewrite in SvelteKit with a few added features.
+This tool takes the in-game lua files for goods and factories and makes the data accessible.
 
-## Live Version
+Visit the live version [here](https://richardtreier.github.io/avorion-econ-v2/).
 
-A deployed version of this application should be available on [Github Pages](#TODO).
+This is based on [Omnicrola/avorion-econ](https://github.com/Omnicrola/avorion-econ) / [Live Version](https://omnicrola.github.io/avorion-econ/. This version is a rewrite in SvelteKit with a few added features.
+
+## Features
+
+- Plan your Avorion factory supply chains
+- Loop up factory assembly block / production capability requirements
+- Manually or automatically fill your supply chain
+- Search by both goods and factory names, which sometimes diverge
 
 ## Development
 
-### Requirements
-
-- Yarn >= 1
-
-### Launching the Dev Server
+Node 20 and Yarn are required
 
 The following launches a SvelteKit Dev Server at http://localhost:3000.
 
 ```shell script
+# Requires Bash, Git Bash or WSL
 yarn && yarn dev
 ```
+
+## Support
+
+This tool was developed for Avorion 1.3.8. As many sandbox and automation features were gutted in the Avorion 2.0 update, this tool remains on 1.3.8.
 
 ## Deployment
 

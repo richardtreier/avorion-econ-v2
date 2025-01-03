@@ -105,12 +105,12 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@sveltejs/adapter-static@next":
+"@sveltejs/adapter-static@1.0.0-next.18":
   version "1.0.0-next.18"
   resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.18.tgz#e8a89b5cbb39cd5f713fb2cfb066666f6a69cb78"
   integrity sha512-fc6FRSkJSRi5SqYPYFWE4aGFWlF77W8EHUdmkzcQXlWTUZ75D4K4O0f/Cj6v5A3eRYxEUKzUJmkt9WJKkVi6sA==
 
-"@sveltejs/kit@next":
+"@sveltejs/kit@1.0.0-next.164":
   version "1.0.0-next.164"
   resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.164.tgz#3a98a0ed335fc0a921246dc080ea88219b25efe4"
   integrity sha512-ohtOWAlOhvdN0wJZjJbpLzbruyBcH0KoTxb+OBXb4UUPXIJYfOw9qSPSZcG4JQFVm4DbxK1tY4RcdOw2gONWEA==

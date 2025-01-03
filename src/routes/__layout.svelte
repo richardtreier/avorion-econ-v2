@@ -23,7 +23,9 @@
   </main>
 
   <footer class="p-3">
-    <ExternalLink text="GitHub" href="https://github.com/richardtreier/avorion-econ-v2"></ExternalLink>
+    Avorion 1.3.8
+    ·
+    View on <ExternalLink text="GitHub" href="https://github.com/richardtreier/avorion-econ-v2"></ExternalLink>
     ·
     Based on <ExternalLink
       href="https://omnicrola.github.io/avorion-econ/"
