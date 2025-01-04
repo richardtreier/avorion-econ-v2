@@ -2,7 +2,7 @@
   <p align="center">
     Avorion Factory Bill of Material tool.
     <br />
-    <a href="https://richardtreier.github.io/avorion-econ-v2">View Live Version</a> | 
+    <a href="https://richardtreier.github.io/avorion-econ-v2">Visit Live Version</a> | 
     <a href="https://github.com/richardtreier/avorion-econ-v2/issues">Report Bug</a>
   </p>
 </div>
@@ -13,9 +13,7 @@ Avorion is a Sandbox game with a simulated economy, space stations with supply c
 
 This tool takes the in-game lua files for goods and factories and makes the data accessible.
 
-Visit the live version [here](https://richardtreier.github.io/avorion-econ-v2/).
-
-This is based on [Omnicrola/avorion-econ](https://github.com/Omnicrola/avorion-econ) / [Live Version](https://omnicrola.github.io/avorion-econ/. This version is a rewrite in SvelteKit with a few added features.
+This is based on [Omnicrola/avorion-econ](https://github.com/Omnicrola/avorion-econ) / [Live Version](https://omnicrola.github.io/avorion-econ/). This version is a rewrite in SvelteKit with a few added features.
 
 ## Features
 
@@ -37,7 +35,7 @@ npm ci && npm run dev
 
 ## Support
 
-This tool was developed for Avorion 1.3.8. As many sandbox and automation features were gutted in the Avorion 2.0 update, this tool remains on 1.3.8.
+The current version is using Avorion 1.3.8 game files. Many sandbox and automation features were removed in the Avorion 2.0 update, thus this tool will remain on 1.3.8 for the near future.
 
 ## Deployment
 
