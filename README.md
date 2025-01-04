@@ -1,43 +1,38 @@
 <h3 align="center">Avorion Economic Planner v2</h3>
   <p align="center">
-    Avorion Factory Bill of Material tool.
+    Factories, Goods, Processing Power, Supply Chains
     <br />
-    <a href="https://richardtreier.github.io/avorion-econ-v2">Visit Live Version</a> | 
-    <a href="https://github.com/richardtreier/avorion-econ-v2/issues">Report Bug</a>
+    <a href="https://richardtreier.github.io/avorion-econ-v2" target="_blank">Visit Live Version</a>
   </p>
 </div>
 
 ## What is this?
 
-Avorion is a Sandbox game with a simulated economy, space stations with supply chains.
+[Avorion](https://steamcommunity.com/app/445220) is a space sandbox game with both builder elements and roguelinke elements. It used to boast a simulated economy, space stations and supply chains, which have been largely reduced with Avorions recent update of 2.0.
 
-This tool takes the in-game lua files for goods and factories and makes the data accessible.
+This tool takes the in-game lua files of 1.3.8, which is still available through steam betas, to help create factory supply chains, navigating the otherwise hard-to-find in-game information.
 
-This is based on [Omnicrola/avorion-econ](https://github.com/Omnicrola/avorion-econ) / [Live Version](https://omnicrola.github.io/avorion-econ/). This version is a rewrite in SvelteKit with a few added features.
+This is a fork of [Omnicrola/avorion-econ](https://github.com/Omnicrola/avorion-econ) / [Live Version](https://omnicrola.github.io/avorion-econ/). This version has been rewritten in SvelteKit 1 with added features.
 
 ## Features
 
-- Plan your Avorion factory supply chains
-- Loop up factory assembly block / production capability requirements
-- Manually or automatically fill your supply chain
-- Search by both goods and factory names, which sometimes diverge
+- Factory Planner showing total production amounts
+- Production Capacity requirements for optimal production speeds
+- Work top down or bottom up in scaling up your business empire
+- Find both goods and production facilities, which can often diverge in name
 
 ## Development
 
-Node 20
+Requires Node 20
 
-The following launches a SvelteKit Dev Server at http://localhost:3000.
+The following launches a Dev Server at http://localhost:5173.
 
 ```shell script
 # Requires Bash, Git Bash or WSL
 npm ci && npm run dev
 ```
 
-## Support
-
-The current version is using Avorion 1.3.8 game files. Many sandbox and automation features were removed in the Avorion 2.0 update, thus this tool will remain on 1.3.8 for the near future.
-
-## Deployment
+## Releasing
 
 The main branch is automatically deployed to GitHub pages.
 
