@@ -32,7 +32,7 @@ const goodConsumers = new Map<number, Factory[]>(
 const goodById = new Map<number, Good>(GOOD_LIST.map((good) => [good.id, good]));
 const factoryById = new Map<number, Factory>(FACTORY_LIST.map((factory) => [factory.id, factory]));
 
-function throwIfNull<T>(obj: T, msgFn: () => string): T {
+function throwIfNull<T>(obj: T | null | undefined, msgFn: () => string): T {
   if (obj == null) {
     throw new Error(msgFn());
   }

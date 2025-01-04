@@ -6,7 +6,7 @@
 <a {href} class="hover:underline" rel="norefferer" target="_blank"
   ><svg
     xmlns="http://www.w3.org/2000/svg"
-    class="w-5 inline-block pr-0.5"
+    class="inline-block w-5 pr-0.5"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"

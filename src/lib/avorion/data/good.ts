@@ -8,7 +8,7 @@ export interface Good {
   icon: string;
   price: number;
   size: number;
-  level?: number;
+  level?: number | null;
   importance: number;
   illegal: boolean;
   dangerous: boolean;

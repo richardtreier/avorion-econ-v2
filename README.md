@@ -26,13 +26,13 @@ This is based on [Omnicrola/avorion-econ](https://github.com/Omnicrola/avorion-e
 
 ## Development
 
-Node 20 and Yarn are required
+Node 20
 
 The following launches a SvelteKit Dev Server at http://localhost:3000.
 
 ```shell script
 # Requires Bash, Git Bash or WSL
-yarn && yarn dev
+npm ci && npm run dev
 ```
 
 ## Support

@@ -6,7 +6,7 @@
   export let classes = '';
 </script>
 
-<div class="flex flex-row gap-3 items-center {classes}">
+<div class="flex flex-row items-center gap-3 {classes}">
   <div>
     {#if !factory.inputs?.length}
       No inputs

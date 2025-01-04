@@ -6,7 +6,7 @@ import { findGoodByIdOrThrow, findProducersForGood } from './lookups';
 
 /**
  * A svelte store for the current build plan
- * 
+ *
  * - Add factories
  * - Auto-add other factories to build everything from scratch
  */

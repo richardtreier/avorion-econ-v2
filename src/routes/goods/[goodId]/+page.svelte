@@ -1,7 +1,7 @@
-<script context="module" lang="ts">
+<script lang="ts">
   import { APPLICATION_NAME } from '$lib/application-name';
   import type { Factory } from '$lib/avorion/data/factory';
-  import { Good } from '$lib/avorion/data/good';
+  import type { Good } from '$lib/avorion/data/good';
   import {
     findConsumersForGood,
     findGoodByIdOrThrow,
@@ -11,54 +11,39 @@
   import FactoryPlannerAddRemoveButtons from '$lib/FactoryPlannerAddRemoveButtons.svelte';
   import GoodLabel from '$lib/GoodLabel.svelte';
   import { formatNumber } from '$lib/utils/format-number';
-  import type { LoadInput } from '@sveltejs/kit';
+  import FactoryInputsOutputs from '$lib/FactoryInputsOutputs.svelte';
+  import { page } from '$app/stores';
 
-  export interface GoodInfo {
-    good: Good;
+  interface GoodInfo {
     producers: Factory[];
     consumers: Factory[];
   }
 
-  export function buildGoodInfo(good: Good): GoodInfo {
-    return {
-      good,
+  let good: Good;
+  let goodInfo: GoodInfo;
+
+  $: {
+    good = findGoodByIdOrThrow(+$page.params.goodId);
+    goodInfo = {
       producers: findGoodOrWasteProducersForGood(good),
       consumers: findConsumersForGood(good)
     };
   }
-
-  export function load(input: LoadInput) {
-    const good = findGoodByIdOrThrow(+input.page.params.goodId);
-    const goodInfo = buildGoodInfo(good);
-    return {
-      props: {
-        good,
-        goodInfo
-      }
-    };
-  }
-</script>
-
-<script lang="ts">
-  import FactoryInputsOutputs from '$lib/FactoryInputsOutputs.svelte';
-
-  export let good: Good;
-  export let goodInfo: GoodInfo;
 </script>
 
 <svelte:head><title>{APPLICATION_NAME} - {good.name}</title></svelte:head>
 
-<div class="flex-grow flex flex-col p-3 gap-3">
+<div class="flex grow flex-col gap-3 p-3">
   <!-- Header Row -->
   <h1 class="flex flex-row items-center gap-3">
-    <div class="flex-grow flex flex-row items-center gap-3">
+    <div class="flex grow flex-row items-center gap-3">
       <GoodLabel {good} large={true} />
     </div>
   </h1>
 
   <!-- Top Section -->
   <div class="flex flex-row gap-3">
-    <div class="flex flex-col gap-3 w-1/2">
+    <div class="flex w-1/2 flex-col gap-3">
       <div>
         <div class="font-bold">Type</div>
         <div>Good</div>
@@ -68,7 +53,7 @@
         <div>{formatNumber(good.price)}</div>
       </div>
     </div>
-    <div class="flex flex-col gap-3 w-1/2">
+    <div class="flex w-1/2 flex-col gap-3">
       <div>
         <div class="font-bold">Description</div>
         <div>{good.description}</div>
@@ -83,7 +68,7 @@
         {#each goodInfo.producers as factory}
           <div>
             <div class="flex flex-row">
-              <div class="flex-grow">
+              <div class="grow">
                 <FactoryLabel {factory} />
               </div>
               <div>
@@ -103,7 +88,7 @@
         {#each goodInfo.consumers as factory}
           <div>
             <div class="flex flex-row">
-              <div class="flex-grow">
+              <div class="grow">
                 <FactoryLabel {factory} />
               </div>
               <div>

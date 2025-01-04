@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ['master']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,7 +18,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -37,21 +37,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+          cache: 'npm'
       - name: Install Dependencies
-        run: yarn
+        run: npm ci
       - name: Build
-        run: yarn build
-      - name: Hack around in the final file
-        run: |
-          cd build
-          rm index.html
-          sed -i 's|"base":""|"base":"/${{ github.event.repository.name }}"|' 404.html
-          sed -i 's|"assets":""|"assets":"/${{ github.event.repository.name }}"|' 404.html
-          sed -i 's|<head>|<head><base href="/${{ github.event.repository.name }}">|' 404.html
-          sed -i 's|/_app|/${{ github.event.repository.name }}/_app|' 404.html
-          cp 404.html index.html
-
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

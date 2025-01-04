@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 table.table-small {
-  @apply w-full whitespace-nowrap rounded-lg bg-white divide-y divide-gray-300 overflow-hidden;
+  @apply w-full divide-y divide-gray-300 overflow-hidden whitespace-nowrap rounded-lg bg-white;
 }
 
 table.table-small thead {
@@ -11,11 +11,11 @@ table.table-small thead {
 }
 
 table.table-small thead tr {
-  @apply text-gray-600 text-left;
+  @apply text-left text-gray-600;
 }
 
 table.table-small thead tr th {
-  @apply font-semibold text-sm uppercase;
+  @apply text-sm font-semibold uppercase;
 }
 
 table.table-small tbody {
@@ -28,7 +28,7 @@ table.table-small tbody tr td {
 }
 
 .btn {
-  @apply font-bold py-2 px-4 rounded;
+  @apply rounded px-4 py-2 font-bold;
 }
 .btn-indigo {
   @apply bg-indigo-500 text-white;

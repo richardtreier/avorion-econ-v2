@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Factory } from './avorion/data/factory';
   import FactoryIcon from './FactoryIcon.svelte';
+  import InternalLink from './InternalLink.svelte';
 
   export let factory: Factory;
   export let large = false;
@@ -10,4 +11,6 @@
 </script>
 
 <FactoryIcon {factory} additionalClasses={iconClasses} />
-<a href="/factories/{factory.id}" class="{textClasses} hover:underline">{factory.name}</a>
+<InternalLink href="/factories/{factory.id}" cls="{textClasses} hover:underline"
+  >{factory.name}</InternalLink
+>
