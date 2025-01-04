@@ -17,7 +17,7 @@ const goodOrWasteProducers = new Map<number, Factory[]>(
     FACTORY_LIST.filter(
       (factory) =>
         factory.garbages.some((output) => output.id === good.id) ||
-        factory.inputs.some((input) => input.id === good.id)
+        factory.outputs.some((input) => input.id === good.id)
     )
   ])
 );
