@@ -1,5 +1,8 @@
 * text=auto eol=lf
 
+# Exclude Avorion raw files as "code"
+avorion/*.lua linguist-vendored
+
 # Web
 *.css           text diff=css
 *.scss          text diff=css
